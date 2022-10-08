@@ -1,0 +1,6 @@
+5
+Moldova Chisinau 1000 1000 1000
+Ucraine Kiev 1000 1000 1000
+Austria Vena 1000 1000 1000
+Russia Moscow 1000 1000 1000
+Romania Buharest 1000 1000 1000

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <script src=
+"https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js">
+    </script>
+    <script src="index.js"></script>
+</head>
+ 
+<body>
+
+</body>
+
+<script>
+
+let pivot_x = -1, pivot_y = 1;    
+let target_x = 1, target_y = 1; 
+let angle = 0;
+let angle_change = 0.0001;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background("#5C98FF");
+  
+  //Пузыри
+  bubles()
+  strokeWeight(0);
+  stroke("black")
+  
+  //Туловище
+  fill("#f1f040")
+  rect(75, 50, 260, 270);
+  rect(75, 50, 260, 270);
+  rect(130, 340, 20, 25);
+  rect(260, 340, 20, 25);
+  arm()
+  
+  //Рубашка
+  fill("#FFF")
+  rect(75, 250, 260, 30);
+  rect(30, 150, 45, 45, 20, 15, 10, 5);
+  rect(335, 150, 45, 45, 15, 20, 5, 10);
+  
+  //Носки
+  rect(130, 360, 20, 15);
+  rect(260, 360, 20, 15);
+  
+  //Штаны
+  fill("#c1690f")
+  rect(75, 270, 260, 50);
+  rect(125, 320, 30, 20);
+  rect(255, 320, 30, 20);
+  
+  //Ремень
+  fill("#000000")
+  rect(110, 280, 50, 25);
+  rect(180, 280, 50, 25);
+  rect(250, 280, 50, 25);
+  
+  //Обувь (левая)
+  rect(105, 370, 25, 20, 10, 10, 5, 10);
+  rect(130, 375, 20, 15, 0, 0, 5, 10);
+  
+  //Обувь (правая)
+  rect(280, 370, 25, 20, 10, 10, 10, 5);
+  rect(260, 375, 20, 15, 0, 0, 10, 5);
+  
+  //Точка на обуви (левая)
+  fill("#FFF")
+  ellipse(112, 375, 7, 5);
+  //Точка на обуви (правая)
+  fill("#FFF")
+  ellipse(298, 375, 7, 5);
+  
+  //Линии на носках (красные)
+  fill("#a52222")
+  rect(130, 366, 20, 3)
+  rect(260, 366, 20, 3)
+  
+  //Линии на носках (синие)
+  fill("#285092")
+  rect(130, 360, 20, 4)
+  rect(260, 360, 20, 4)
+  
+  //Линии на носках (серые)
+  fill("#696a65")
+  rect(130, 363, 20, 3)
+  rect(260, 363, 20, 3)
+  
+  push()
+  //Галстук
+  rectMode(CENTER)
+  translate(target_x, target_y);
+  rotate(angle);
+  translate(-pivot_x, -pivot_y);
+  fill("#d60c0a")
+  beginShape();
+  vertex(205, 265);
+  vertex(220, 290);
+  vertex(205, 310);
+  vertex(190, 290);
+  endShape();
+  beginShape();
+  vertex(190, 250);
+  vertex(220, 250);
+  vertex(205, 270);
+  endShape();
+  pop()
+  
+  
+  //Губки
+  strokeWeight(0)
+  fill("#b7da00")
+  circle(120, 70, 20)
+  ellipse(95, 75, 25, 35);
+  circle(95, 105, 20)
+  circle(295, 235, 20)
+  ellipse(320, 230, 25, 35);
+  circle(320, 200, 20)
+  
+  eyes(map(sin(frameCount/20), -1, 1, 190, 210))
+  
+
+  smile()
+  
+    angle += angle_change;
+  if (abs(angle) > 0.01)
+    angle_change *= -1;
+}
+
+function eyes(x) {
+    //Глаза
+  fill("white")
+  circle(x - 30, 140, 70)
+  circle(x + 40, 140, 70)
+  fill("#4bceea")
+  circle(x - 30, 140, 40)
+  circle(x + 40, 140, 40)
+  fill("black")
+  circle(x - 30, 140, 20)
+  circle(x + 40, 140, 20)
+  fill("white")
+  circle(x - 40, 130, 10)
+  circle(x + 30, 130, 10)
+  circle(x - 25, 150, 5)
+  circle(x + 48, 150, 5)
+}
+
+function smile() {
+  //Улыбка
+  noFill();
+  stroke(0, 0, 0);
+  strokeWeight(2);
+  arc(205, 110, 200, 200, 120, 103);
+}
+
+function bubles() {
+  fill("#78cee2")
+  stroke(255)
+  strokeWeight(5)
+  for (let i = 0; i < 50; i++) {
+    circle(random(width), random(height), random(40))
+  }
+}
+
+function arm() {
+  rect(45, 160, 20, 100);
+  rect(345, 160, 20, 100);
+  ellipse(55, 255, 25, 25);
+  ellipse(355, 255, 25, 25);
+}
+
+</script>
+ 
+</html>
