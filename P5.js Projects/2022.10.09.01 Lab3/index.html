@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <script src=
+"https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js">
+    </script>
+    <script src="index.js"></script>
+</head>
+  <body>
+    <script>
+
+function preload() {
+  andrei = loadImage('Andrei.jpg');
+  dima = loadImage('Dima.jpg')
+  sanea = loadImage('Sanea.jpg')
+  danil = loadImage('Danil.jpg')
+  dima2 = loadImage('dima2.jpg')
+  tania = loadImage('Tania.jpg')
+  
+}
+
+function setup() {
+  createCanvas(600, windowHeight, WEBGL);
+}
+
+function draw() {
+  background(0,0,0,0);
+  noStroke();
+  
+  texture(andrei);
+  push()
+  translate(-150, 90, 0);
+  rotateX(1)
+  rotateZ(0.5)
+  rotateY(0)
+  box(60)
+  pop()
+  
+  texture(dima);
+  push()
+  translate(-40, 40);
+  rotateX(1)
+  rotateZ(1)
+  rotateY(17)
+  sphere(40)
+  pop()
+  
+  texture(sanea);
+  push()
+  translate(130, 180);
+  rotateX(0)
+  rotateZ(0)
+  rotateY(0)
+  cylinder(40)
+  pop()
+  
+  texture(danil);
+  push()
+  translate(150, 100)
+  rotateX(10)
+  rotateZ(15.8)
+  rotateY(0)
+  cone(60)
+  pop()
+  
+  texture(dima2);
+  push()
+  translate(55, -10)
+  rotateX(2)
+  rotateZ(15)
+  rotateY(15)
+  torus(30)
+  pop()
+  
+  texture(tania);
+  push()
+  translate(190, -5)
+  rotateX(0)
+  rotateZ(0)
+  rotateY(-1.2)
+  plane(80)
+  pop()
+
+}
+</script>
+  
+
+</body></html>
