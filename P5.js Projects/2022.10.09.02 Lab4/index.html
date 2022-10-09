@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <script>
+let angle = 0;
+let increase = true
+
+function preload() {
+  andrei = loadImage('Andrei.jpg');
+  dima = loadImage('Dima.jpg')
+  sanea = loadImage('Sanea.jpg')
+  danil = loadImage('Danil.jpg')
+  dima2 = loadImage('dima2.jpg')
+  tania = loadImage('Tania.jpg')
+  
+}
+
+function setup() {
+  createCanvas(600, windowHeight, WEBGL);
+}
+
+function draw() {
+  background(0,0,0,0);
+  noStroke();
+  
+  translate(mouseX - width / 2,  mouseY - width / 2);
+  
+  texture(andrei);
+  push()
+  translate(-150, 90, 0);
+  scale(angle * 0.1)
+  rotateX(angle)
+  rotateZ(angle * 0.5)
+  rotateY(angle * 0)
+  box(60)
+  pop()
+  
+  texture(dima);
+  push()
+  translate(-40, 40);
+  rotateX(angle)
+  rotateZ(angle)
+  rotateY(angle)
+  sphere(40)
+  pop()
+  
+  texture(sanea);
+  push()
+  translate(130, 180);
+  rotateX(angle * 1)
+  rotateZ(angle * 1)
+  rotateY(angle * 1)
+  cylinder(40)
+  pop()
+  
+  texture(danil);
+  push()
+  translate(150, 100)
+  rotateX(angle)
+  rotateZ(angle)
+  rotateY(angle)
+  cone(60)
+  pop()
+  
+  texture(dima2);
+  push()
+  translate(55, -10)
+  rotateX(angle)
+  rotateZ(angle)
+  rotateY(angle)
+  torus(30)
+  pop()
+  
+  texture(tania);
+  push()
+  translate(angle * 5 + 180, -5, 0)
+  rotateX(angle)
+  rotateZ(angle)
+  rotateY(angle)
+  plane(80)
+  pop()
+  
+  if (increase) {
+    angle += 0.1
+  }
+  if (!increase) {
+    angle -= 0.1
+  }
+  
+  if (angle >= 15) {
+    increase = false
+  }
+  if (angle <= 0) {
+    increase = true
+  }
+}
+</script>
+  
+
+</body></html>
