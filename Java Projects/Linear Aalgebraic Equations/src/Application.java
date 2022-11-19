@@ -1,3 +1,4 @@
+import static java.lang.Double.isInfinite;
 import static java.lang.System.in;
 
 import java.util.Arrays;
@@ -12,6 +13,7 @@ public class Application {
   private static final double[][] equation = new double[30][30];
   private static int rows;
   private static int columns;
+  private static boolean isASolution = true;
 
   public static void main(String[] args) {
     boolean exitProgram = false;
@@ -26,6 +28,7 @@ public class Application {
 
       System.out.print("Сделайте ваш выбор: ");
       choice = scanner.nextInt();
+      space();
 
       switch (choice) {
         case 1: {
@@ -41,9 +44,16 @@ public class Application {
           break;
         }
         case 4: {
+          isASolution = true;
+          replaceZeroLines();
           double[] solution = findRoot();
-          System.out.println("Решение СЛАУ");
-          arrayPrint(solution, "X", 1);
+          if (isASolution) {
+            System.out.println("Решение СЛАУ");
+            arrayPrint(solution, "X", 1);
+          } else {
+            System.out.println("Система несовместна (не имеет ни одного решения) или неопределенна (имеет множество решений)");
+            space();
+          }
           break;
         }
         case 5: {
@@ -88,29 +98,38 @@ public class Application {
     }
 
     //прямой ход
-    for (int diagonal = 0; diagonal < rows - 1; diagonal++) {
+    for (int diagonal = 0; diagonal < rows - 1 && isASolution; diagonal++) {
       for (int row = diagonal + 1; row < rows; row++) {
         k = tempEquation[row][diagonal] / tempEquation[diagonal][diagonal];
-        for (int column = 0; column < columns; column++) {
+        if (isInfinite(k)) {
+          isASolution = false;
+        }
+        for (int column = 0; column < columns && isASolution; column++) {
           tempEquation[row][column] = tempEquation[row][column] - tempEquation[diagonal][column] * k;
         }
       }
     }
 
     //обратный ход
-    for (int diagonal = rows - 1; diagonal > 0; diagonal--) {
+    for (int diagonal = rows - 1; diagonal > 0 && isASolution; diagonal--) {
       for (int row = 0; row < diagonal; row++) {
         k = tempEquation[row][diagonal] / tempEquation[diagonal][diagonal];
-        for (int column = 0; column < rows + 1; column++) {
+        if (isInfinite(k)) {
+          isASolution = false;
+        }
+        for (int column = 0; column < rows + 1 && isASolution; column++) {
           tempEquation[row][column] = tempEquation[row][column] - tempEquation[diagonal][column] * k;
         }
       }
     }
 
     //привести главную диагональ к 1
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows && isASolution; i++) {
       k = 1 / tempEquation[i][i];
-      for (int j = 0; j <= rows; j++) {
+      if (isInfinite(k)) {
+        isASolution = false;
+      }
+      for (int j = 0; j <= rows && isASolution; j++) {
         tempEquation[i][j] = tempEquation[i][j] * k;
       }
     }
@@ -167,9 +186,6 @@ public class Application {
   }
 
   private static void arrayPrint(double[] slau, String name, int colCount) {
-    if (!systemCompatible(slau)) {
-      System.out.println("Система несовместна (не имеет ни одного решения) или неопределенна (имеет множество решений)\n\n");
-    } else {
       int currentCol = 0;
       for (int i = 0; i < slau.length; i++) {
         System.out.printf("%s[% -3d]= %-8.3f ", name, i, slau[i]);
@@ -180,7 +196,6 @@ public class Application {
       }
       space();
     }
-  }
 
   /**
    * Пример правильной матрицы для проверки.
@@ -313,11 +328,23 @@ public class Application {
     System.out.println("\n\n");
   }
 
-  private static boolean systemCompatible(double[] slau) {
-    long count = Arrays.stream(slau)
-        .filter(Double::isNaN)
-        .count();
+  private static void replaceZeroLines() {
+    for (int i = 0; i < rows; i++) {
+      if (equation[i][i] == 0) {
+        int nonZeroLine = getNonZeroLine(i);
+        double[] tmpRow = equation[i];
+        equation[i] = equation[nonZeroLine];
+        equation[nonZeroLine] = tmpRow;
+      }
+    }
+  }
 
-    return count == 0;
+  private static int getNonZeroLine(int p) {
+    for (int i = 0; i < rows; i++) {
+      if (equation[i][p] != 0) {
+        return i;
+      }
+    }
+    return p;
   }
 }
