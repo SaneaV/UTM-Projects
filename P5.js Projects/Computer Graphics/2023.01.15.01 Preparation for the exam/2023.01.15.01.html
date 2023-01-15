@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <script src=
+"https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js">
+    </script>
+    <script src="index.js"></script>
+</head>
+ 
+<body>
+
+</body>
+
+<script>
+let eyeOpen = true;
+let eyeSize = 20;
+let eyeSpeed = 0.05;
+let i = 1;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(135, 206, 235);
+  
+  i++;
+  drawCloud(i+(-50), 50);
+  drawCloud(i+(-120), 70);
+  drawCloud(i+(-100), 50);
+  drawCloud(i+(-170), 50);
+  drawCloud(i+(-350), 50);
+  drawCloud(i+(-220), 70);
+  drawCloud(i+50, 50);
+  drawCloud(i+120, 70);
+  drawCloud(i+100, 50);
+  drawCloud(i+170, 50);
+  drawCloud(i+350, 50);
+  drawCloud(i+220, 70);
+  
+  if (i>400) {
+    i = 1;
+  }
+  
+  stroke("black");
+  fill(255, 195, 170);
+  rect(305, 320, 10, 10);
+  rect(335, 320, 10, 10);
+  ellipse(320, 270, 30, 30);
+  fill(173, 216, 230);
+  rect(320, 306, 20, 40);
+  rect(305, 301, 10, 30);
+  rect(335, 301, 10, 30);
+  fill("blue");
+  rect(315, 351, 10, 50);
+  rect(325, 351, 10, 50);
+  fill("white");
+  ellipse(315, 268, 5, 5);
+  ellipse(325, 268, 5, 5);
+  arc(320, 276, 10, 10, 0, PI);
+  fill("black")
+  ellipse(315, 268, 1, 1);
+  ellipse(325, 268, 1, 1);
+  
+  rect(210, 130, 30, 140);
+  fill("yellow");
+  rect(150, 270, 200, 200);
+  fill("brown");
+  triangle(150, 20, 50, 170, 250, 170);
+  rect(200, 350, 50, 150);
+  fill("green");
+  rect(0, 390, 800, 50);
+  fill("black");
+  ellipse(190, 330, 10, 10);
+
+  fill("lightblue");
+  rect(92, 230, 39, 39);
+  rect(131, 230, 39, 39);
+  rect(92, 269, 39, 39);
+  rect(131, 269, 39, 39);
+  
+  rectMode(CENTER);
+  translate(width/2, height/2);
+  
+  fill(255, 255, 0);
+  ellipse(120, -120, 130, 130);
+  
+  if (eyeOpen) {
+    eyeSize += eyeSpeed;
+  } else {
+    eyeSize -= eyeSpeed;
+  }
+  
+  if (eyeSize >= 30) {
+    eyeOpen = false;
+  } else if (eyeSize <= 20) {
+    eyeOpen = true;
+  }
+  
+  fill("white");
+  arc(90, -150, eyeSize, eyeSize, 0, TWO_PI);
+  arc(150, -150, eyeSize, eyeSize, 0, TWO_PI);
+  
+  fill("black");
+  ellipse(90, -150, eyeSize / 2, eyeSize / 2);
+  ellipse(150, -150, eyeSize / 2, eyeSize / 2);
+  
+  arc(120, -100, 50, 50, 0, PI);
+  fill("white")
+  arc(120, -100, 50, 10, 0, PI);
+  fill("red")
+  arc(120, -95, 20, 20, 0, PI);
+  
+  fill("red")
+  translate(p5.Vector.fromAngle(millis() / 300, 2));
+  ellipse(120, -120, 10, 10);  
+  
+  fumes();
+}
+
+function fumes() {
+  for (var i = 17; i < 30; i++) {
+    frameRate(20);
+    fill("grey")
+    rect(random(0, 20), i*-9, random(5, 15), random(15, 25))
+  }
+}
+
+function drawCloud(x, y) {
+  fill(255);
+  noStroke();
+  ellipse(x, y, 50, 50);
+  ellipse(x + 20, y + 10, 60, 60);
+  ellipse(x - 20, y + 10, 60, 60);
+  ellipse(x + 10, y - 10, 70, 70);
+  ellipse(x - 10, y - 10, 70, 70);
+}
+</script>
+ 
+</html>
