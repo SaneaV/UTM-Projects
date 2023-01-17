@@ -6,7 +6,6 @@ public class Application {
   private static final Random RANDOM = new Random();
   private static int[][] GRAPH;
   private static int ROWS;
-  private static int COLS;
 
   public static void main(String[] args) {
     boolean stop = false;
@@ -32,7 +31,7 @@ public class Application {
           System.out.println("You have chosen: Create happy occasion graph");
 
           inputRowsAndCols(scanner);
-          GRAPH = happyOccasionGraph(ROWS, COLS);
+          GRAPH = happyOccasionGraph(ROWS, ROWS);
           break;
         }
         case 2: {
@@ -40,7 +39,7 @@ public class Application {
           System.out.println("You have chosen: Create unhappy occasion graph");
 
           inputRowsAndCols(scanner);
-          GRAPH = unhappyOccasionGraph(ROWS, COLS);
+          GRAPH = unhappyOccasionGraph(ROWS, ROWS);
           break;
         }
         case 3: {
@@ -48,7 +47,7 @@ public class Application {
           System.out.println("You have chosen: Create medium occasion graph");
 
           inputRowsAndCols(scanner);
-          GRAPH = mediumOccasionGraph(ROWS, COLS);
+          GRAPH = mediumOccasionGraph(ROWS, ROWS);
           break;
         }
         case 4: {
@@ -132,7 +131,7 @@ public class Application {
 
   public static void printGraph() {
     for (int i = 0; i < ROWS; i++) {
-      for (int j = 0; j < COLS; j++) {
+      for (int j = 0; j < ROWS; j++) {
         System.out.print(GRAPH[i][j] + " ");
       }
       System.out.println();
@@ -152,7 +151,5 @@ public class Application {
   private static void inputRowsAndCols(Scanner scanner) {
     System.out.print("Number of rows: ");
     ROWS = scanner.nextInt();
-    System.out.print("Number of columns: ");
-    COLS = scanner.nextInt();
   }
 }
