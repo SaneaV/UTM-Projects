@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <script src=
+"https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js">
+    </script>
+    <script src="index.js"></script>
+</head>
+ 
+<body>
+
+</body>
+
+<script>
+let eyeOpen = true;
+let eyeSize = 20;
+let eyeSpeed = 0.05;
+let i = 1;
+
+let houseColor = "yellow";
+let roofColor = "brown";
+
+function setup() {
+  createCanvas(600, 600, WEBGL);
+}
+
+function draw() {
+  background(135, 206, 235);
+  
+  i++;
+  drawCloud(i+(-50), 50);
+  drawCloud(i+(-120), 70);
+  drawCloud(i+(-100), 50);
+  drawCloud(i+(-170), 50);
+  drawCloud(i+(-350), 50);
+  drawCloud(i+(-220), 70);
+  drawCloud(i+50, 50);
+  drawCloud(i+120, 70);
+  drawCloud(i+100, 50);
+  drawCloud(i+170, 50);
+  drawCloud(i+350, 50);
+  drawCloud(i+220, 70);
+  
+  if (i>400) {
+    i = 1;
+  }
+  
+
+  fill("black")
+  noStroke();
+  rect(-80, 10, 30, 140);
+  stroke("black");
+  fill(houseColor);
+  rect(-150, 175, 200, 200);
+  fill(roofColor);
+  triangle(-250, 75, -150, -70, -50, 75);
+  rect(-90,225,50,100);
+  fill("green");
+  rect(-300, 300, 1200, 50);
+  fill("black");
+  ellipse(-100, 230, 10, 10);
+
+  fill("lightblue");
+  rect(-200, 150, 39, 39);
+  rect(-200, 189, 39, 39);
+  rect(-161, 150, 39, 39);
+  rect(-161, 189, 39, 39);
+  
+  rectMode(CENTER);
+  translate(width/2, height/2);
+  
+  fill(255, 255, 0);
+  ellipse(-80, -450, 130, 130);
+  
+  fill("brown");
+  push();
+  translate(-150, -60)
+  box(50);
+  pop();
+  
+  if (eyeOpen) {
+    eyeSize += eyeSpeed;
+  } else {
+    eyeSize -= eyeSpeed;
+  }
+  
+  if (eyeSize >= 30) {
+    eyeOpen = false;
+  } else if (eyeSize <= 20) {
+    eyeOpen = true;
+  }
+  
+  fill("white");
+  arc(-105, -470, eyeSize, eyeSize, 0, TWO_PI);
+  arc(-50, -470, eyeSize, eyeSize, 0, TWO_PI);
+  
+  fill("black");
+  ellipse(-105, -470, eyeSize / 2, eyeSize / 2);
+  ellipse(-50, -470, eyeSize / 2, eyeSize / 2);
+  
+  arc(-80, -430, 50, 50, 0, PI);
+  fill("white")
+  arc(120, -100, 50, 10, 0, PI);
+  fill("red")
+  arc(-80, -430, 20, 20, 0, PI);
+  
+  fill("red")
+  translate(p5.Vector.fromAngle(millis() / 300, 2));
+  ellipse(-80, -450, 10, 10);  
+
+  fill("black");
+  push();
+  noStroke();
+  translate(-250, -340);
+  cylinder(15, 2);
+  pop();
+  push();
+  noStroke();
+  translate(-230, -340);
+  cylinder(15, 2);
+  pop();
+  
+  
+  push();
+  noStroke();
+  translate(-210, -320);
+  cylinder(15, 2);
+  pop();
+  push();
+  noStroke();
+  translate(-180, -320);
+  cylinder(15, 2);
+  pop();
+  
+  if (mouseIsPressed) {
+    houseColor = color(random(255), random(255), random(255));
+	roofColor = color(random(255), random(255), random(255));
+  }
+  
+  push();
+  fill("green")
+  translate(-150, -100);
+  rotateX(3.5);
+  cone(100, 65, 16, 1);
+  translate(0, 40);
+  cone(80, 65, 16, 1);
+  translate(0, 50);
+  cone(60, 65, 16, 1);
+  pop();
+}
+
+function drawCloud(x, y) {
+  fill(255);
+  noStroke();
+  ellipse(x + 20, y - 300, 100, 60);
+  ellipse(x - 20, y - 300, 160, 60);
+  ellipse(x + 10, y - 300, 170, 70);
+  ellipse(x - 10, y - 300, 70, 70);
+}
+</script>
