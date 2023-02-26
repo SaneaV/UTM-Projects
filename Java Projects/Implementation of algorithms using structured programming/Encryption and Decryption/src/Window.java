@@ -59,7 +59,6 @@ public class Window {
   }
 
   public static void create(JFrame jFrame) {
-
     //Input text
     final JLabel inputTextLabel = createJLabel(21, 10, 170, 30, INPUT_TEXT);
     final JTextArea inputTextArea = createJTextArea(20, 40, 500, 200, true, true);
