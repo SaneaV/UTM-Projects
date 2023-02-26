@@ -62,7 +62,7 @@ public class Window {
 
     //Input text
     final JLabel inputTextLabel = createJLabel(21, 10, 170, 30, INPUT_TEXT);
-    final JTextArea inputTextArea = createJTextArea(20, 40, 500, 200);
+    final JTextArea inputTextArea = createJTextArea(20, 40, 500, 200, true, true);
 
     //Secret key
     final JLabel secretKeyTextLabel = createJLabel(21, 245, 170, 30, SECRET_TEXT);
@@ -70,11 +70,11 @@ public class Window {
 
     //Output text
     final JLabel outputTextLabel = createJLabel(21, 320, 170, 30, OUTPUT_TEXT);
-    final JTextArea outputTextArea = createJTextArea(20, 350, 500, 200);
+    final JTextArea outputTextArea = createJTextArea(20, 350, 500, 200, false, false);
 
     //Buttons
-    final JButton encryptButton = createJButton(550, 40, 150, 30, ENCRYPT_TEXT);
-    final JButton decryptButton = createJButton(550, 80, 150, 30, DECRYPT_TEXT);
+    final JButton encryptButton = createJButton(550, 40, 150, 30, ENCRYPT_TEXT, false);
+    final JButton decryptButton = createJButton(550, 80, 150, 30, DECRYPT_TEXT, false);
 
     //Image
     final JLabel utmImage = getImage(550, 455, UTM_ICON_NAME);
@@ -83,8 +83,7 @@ public class Window {
     final JComboBox<String> algorithmsComboBox = createComboBox(550, 120, 150, 30, algorithms);
 
     setNextFocus(inputTextArea, secretKeyTextField);
-    setNextFocus(secretKeyTextField, outputTextLabel);
-    setNextFocus(outputTextArea, encryptButton);
+    setNextFocus(secretKeyTextField, encryptButton);
     setNextFocusOnNonActive(algorithmsComboBox, inputTextArea);
 
     addAll(jFrame, inputTextLabel, inputTextArea, secretKeyTextLabel, secretKeyTextField, outputTextLabel, outputTextArea,
@@ -99,6 +98,7 @@ public class Window {
     setVisible(jFrame, FRAME_VISIBILITY);
   }
 
+  //===========================ACTIONS ON JFRAME===========================
   private static void setSize(JFrame jFrame, int width, int height) {
     jFrame.setSize(width, height);
   }
@@ -128,6 +128,12 @@ public class Window {
     jFrame.setIconImage(iconImage.getImage());
   }
 
+  private static void addAll(JFrame jFrame, JComponent... components) {
+    Arrays.stream(components).forEach(jFrame::add);
+  }
+  //===========================ACTIONS ON JFRAME===========================
+
+  //===========================CREATE AND CUSTOMIZE JCOMPONENTS===========================
   private static JLabel getImage(int x, int y, String imagePath) {
     try {
       final BufferedImage myPicture = ImageIO.read(new File(imagePath));
@@ -141,13 +147,15 @@ public class Window {
     throw new RuntimeException(String.format(IMAGE_NOT_FOUND, imagePath));
   }
 
-  private static JTextArea createJTextArea(int x, int y, int width, int height) {
+  private static JTextArea createJTextArea(int x, int y, int width, int height, boolean isEditable, boolean isFocusable) {
     final JTextArea jTextArea = new JTextArea();
     jTextArea.setBounds(x, y, width, height);
     final Font font = new Font(FONT_NAME, PLAIN, 16);
     jTextArea.setFont(font);
     jTextArea.setWrapStyleWord(true);
     jTextArea.setLineWrap(true);
+    jTextArea.setEditable(isEditable);
+    jTextArea.setFocusable(isFocusable);
 
     final Border outsideBorder = BorderFactory.createLineBorder(BLACK);
     final Border insideBorder = BorderFactory.createEmptyBorder(10, 10, 10, 10);
@@ -175,11 +183,12 @@ public class Window {
     return jLabel;
   }
 
-  private static JButton createJButton(int x, int y, int width, int height, String text) {
+  private static JButton createJButton(int x, int y, int width, int height, String text, boolean isFocusPainted) {
     final JButton jButton = new JButton(text);
     jButton.setBounds(x, y, width, height);
     final Font font = new Font(FONT_NAME, PLAIN, 16);
     jButton.setFont(font);
+    jButton.setFocusPainted(isFocusPainted);
     return jButton;
   }
 
@@ -190,7 +199,9 @@ public class Window {
     comboBox.setBounds(x, y, width, height);
     return comboBox;
   }
+  //===========================CREATE AND CUSTOMIZE JCOMPONENTS===========================
 
+  //===========================EVENTS ON JCOMPONENTS===========================
   private static void setNextFocus(JComponent jComponentOwner, JComponent nextComponent) {
     jComponentOwner.addKeyListener(new KeyAdapter() {
       @Override
@@ -215,7 +226,9 @@ public class Window {
       }
     });
   }
+  //===========================EVENTS ON JCOMPONENTS===========================
 
+  //===========================APPLICATION INITIALIZATION===========================
   private static void loadFont(String fontName) {
     try {
       final Font font = Font.createFont(TRUETYPE_FONT, new File(fontName));
@@ -225,8 +238,5 @@ public class Window {
       e.printStackTrace();
     }
   }
-
-  private static void addAll(JFrame jFrame, JComponent... components) {
-    Arrays.stream(components).forEach(jFrame::add);
-  }
+  //===========================APPLICATION INITIALIZATION===========================
 }
