@@ -3,6 +3,7 @@ import static java.util.Objects.isNull;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import window.Window;
 
 public class Application {
 

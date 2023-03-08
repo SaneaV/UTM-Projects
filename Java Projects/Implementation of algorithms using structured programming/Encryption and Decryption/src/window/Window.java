@@ -1,3 +1,5 @@
+package window;
+
 import static java.awt.Color.BLACK;
 import static java.awt.Font.PLAIN;
 import static java.awt.Font.TRUETYPE_FONT;
@@ -5,12 +7,13 @@ import static java.awt.event.KeyEvent.VK_TAB;
 import static java.util.Arrays.asList;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-import java.awt.Component;
+import algorithm.AlgorithmFactory;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
-import java.awt.LayoutManager;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyAdapter;
@@ -51,8 +54,11 @@ public class Window {
   private static final String OUTPUT_TEXT = "Output text:";
   private static final String ENCRYPT_TEXT = "Encrypt";
   private static final String DECRYPT_TEXT = "Decrypt";
+  private static final String COPY_TEXT = "Copy";
 
-  private static final List<String> algorithms = asList("RC4", "DES", "BLOWFISH");
+  private static final List<String> algorithms = asList("RC4", "XOR", "Atbash", "Vigenere");
+
+  private static final AlgorithmFactory algorithmFactory = new AlgorithmFactory();
 
   static {
     loadFont(FONT_FILE_NAME);
@@ -74,54 +80,41 @@ public class Window {
     //Buttons
     final JButton encryptButton = createJButton(550, 40, 150, 30, ENCRYPT_TEXT, false);
     final JButton decryptButton = createJButton(550, 80, 150, 30, DECRYPT_TEXT, false);
+    final JButton copyButton = createJButton(550, 120, 150, 30, COPY_TEXT, false);
 
     //Image
-    final JLabel utmImage = getImage(550, 455, UTM_ICON_NAME);
+    final JLabel utmImage = getImage(550, 465, UTM_ICON_NAME);
 
     //Dropdown
-    final JComboBox<String> algorithmsComboBox = createComboBox(550, 120, 150, 30, algorithms);
+    final JComboBox<String> algorithmsComboBox = createComboBox(550, 160, 150, 30, algorithms);
 
     setNextFocus(inputTextArea, secretKeyTextField);
     setNextFocus(secretKeyTextField, encryptButton);
     setNextFocusOnNonActive(algorithmsComboBox, inputTextArea);
 
-    addAll(jFrame, inputTextLabel, inputTextArea, secretKeyTextLabel, secretKeyTextField, outputTextLabel, outputTextArea,
-        encryptButton, decryptButton, utmImage, algorithmsComboBox);
+    copyButton.addActionListener(e -> Toolkit.getDefaultToolkit()
+        .getSystemClipboard()
+        .setContents(new StringSelection(outputTextArea.getText()), null));
+    encryptButton.addActionListener(
+        e -> outputTextArea.setText(algorithmFactory.getAlgorithm(algorithmsComboBox.getSelectedItem().toString())
+            .encrypt(inputTextArea.getText().getBytes(), secretKeyTextField.getText().getBytes())));
+    decryptButton.addActionListener(
+        e -> outputTextArea.setText(algorithmFactory.getAlgorithm(algorithmsComboBox.getSelectedItem().toString())
+            .decrypt(inputTextArea.getText(), secretKeyTextField.getText().getBytes())));
 
-    setSize(jFrame, WIDTH, HEIGHT);
-    setDefaultCloseOperation(jFrame, DEFAULT_CLOSE_OPERATION);
-    setResizable(jFrame, FRAME_RESIZABILITY);
-    setLocationRelativeTo(jFrame, null);
+    addAll(jFrame, inputTextLabel, inputTextArea, secretKeyTextLabel, secretKeyTextField, outputTextLabel, outputTextArea,
+        encryptButton, decryptButton, copyButton, utmImage, algorithmsComboBox);
+
+    jFrame.setSize(WIDTH, HEIGHT);
+    jFrame.setDefaultCloseOperation(DEFAULT_CLOSE_OPERATION);
+    jFrame.setResizable(FRAME_RESIZABILITY);
+    jFrame.setLocationRelativeTo(null);
+    jFrame.setLayout(null);
+    jFrame.setVisible(FRAME_VISIBILITY);
     setImageIcon(jFrame, ICON_NAME);
-    setLayout(jFrame, null);
-    setVisible(jFrame, FRAME_VISIBILITY);
   }
 
   //===========================ACTIONS ON JFRAME===========================
-  private static void setSize(JFrame jFrame, int width, int height) {
-    jFrame.setSize(width, height);
-  }
-
-  private static void setLayout(JFrame jFrame, LayoutManager layoutManager) {
-    jFrame.setLayout(layoutManager);
-  }
-
-  private static void setVisible(JFrame jFrame, boolean visibility) {
-    jFrame.setVisible(visibility);
-  }
-
-  private static void setLocationRelativeTo(JFrame jFrame, Component component) {
-    jFrame.setLocationRelativeTo(component);
-  }
-
-  private static void setResizable(JFrame jFrame, boolean resizability) {
-    jFrame.setResizable(resizability);
-  }
-
-  private static void setDefaultCloseOperation(JFrame jFrame, int defaultCloseOperation) {
-    jFrame.setDefaultCloseOperation(defaultCloseOperation);
-  }
-
   private static void setImageIcon(JFrame jFrame, String iconName) {
     final ImageIcon iconImage = new ImageIcon(iconName);
     jFrame.setIconImage(iconImage.getImage());
