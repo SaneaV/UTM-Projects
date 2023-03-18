@@ -8,6 +8,10 @@ import static java.util.Arrays.asList;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 import algorithm.AlgorithmFactory;
+import algorithm.Atbash;
+import algorithm.RC4;
+import algorithm.Vigenere;
+import algorithm.XOR;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -23,6 +27,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -58,7 +63,8 @@ public class Window {
 
   private static final List<String> algorithms = asList("RC4", "XOR", "Atbash", "Vigenere");
 
-  private static final AlgorithmFactory algorithmFactory = new AlgorithmFactory();
+  private static final AlgorithmFactory algorithmFactory = new AlgorithmFactory(new RC4(), new XOR(), new Atbash(),
+      new Vigenere());
 
   static {
     loadFont(FONT_FILE_NAME);
@@ -95,12 +101,21 @@ public class Window {
     copyButton.addActionListener(e -> Toolkit.getDefaultToolkit()
         .getSystemClipboard()
         .setContents(new StringSelection(outputTextArea.getText()), null));
+
     encryptButton.addActionListener(
-        e -> outputTextArea.setText(algorithmFactory.getAlgorithm(algorithmsComboBox.getSelectedItem().toString())
-            .encrypt(inputTextArea.getText().getBytes(), secretKeyTextField.getText().getBytes())));
+        e -> {
+          final String selectedItem = Objects.requireNonNull(algorithmsComboBox.getSelectedItem()).toString();
+          secretKeyTextField.setText(algorithmFactory.getAlgorithm(selectedItem).updateKey(secretKeyTextField.getText()));
+          outputTextArea.setText(algorithmFactory.getAlgorithm(Objects.requireNonNull(selectedItem))
+              .encrypt(inputTextArea.getText().getBytes(), secretKeyTextField.getText().getBytes()));
+        });
     decryptButton.addActionListener(
-        e -> outputTextArea.setText(algorithmFactory.getAlgorithm(algorithmsComboBox.getSelectedItem().toString())
-            .decrypt(inputTextArea.getText(), secretKeyTextField.getText().getBytes())));
+        e -> {
+          final String selectedItem = Objects.requireNonNull(algorithmsComboBox.getSelectedItem()).toString();
+          secretKeyTextField.setText(algorithmFactory.getAlgorithm(selectedItem).updateKey(secretKeyTextField.getText()));
+          outputTextArea.setText(algorithmFactory.getAlgorithm(Objects.requireNonNull(selectedItem))
+              .decrypt(inputTextArea.getText(), secretKeyTextField.getText().getBytes()));
+        });
 
     addAll(jFrame, inputTextLabel, inputTextArea, secretKeyTextLabel, secretKeyTextField, outputTextLabel, outputTextArea,
         encryptButton, decryptButton, copyButton, utmImage, algorithmsComboBox);

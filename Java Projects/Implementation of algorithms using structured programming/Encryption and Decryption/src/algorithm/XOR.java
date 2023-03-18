@@ -19,6 +19,11 @@ public class XOR implements Algorithm {
   }
 
   @Override
+  public String updateKey(String key) {
+    return key;
+  }
+
+  @Override
   public String getName() {
     return XOR;
   }

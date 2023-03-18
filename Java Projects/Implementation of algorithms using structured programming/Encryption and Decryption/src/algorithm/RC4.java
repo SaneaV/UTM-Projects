@@ -32,6 +32,11 @@ public class RC4 implements Algorithm {
   }
 
   @Override
+  public String updateKey(String key) {
+    return key;
+  }
+
+  @Override
   public String getName() {
     return RC4;
   }

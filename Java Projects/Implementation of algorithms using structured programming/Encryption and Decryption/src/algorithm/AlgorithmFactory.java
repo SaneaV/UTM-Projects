@@ -1,17 +1,33 @@
 package algorithm;
 
-import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 
 public class AlgorithmFactory {
 
-  private static final List<Algorithm> algorithms = asList(new RC4(), new XOR(), new Atbash(), new Vigenere());
+  private final List<Algorithm> algorithms;
+  private Map<String, Algorithm> algorithmByName;
+
+  public AlgorithmFactory(Algorithm... algorithms) {
+    this.algorithms = Arrays.stream(algorithms)
+        .collect(toList());
+    init();
+  }
+
+  private void init() {
+    algorithmByName = algorithms.stream()
+        .collect(toMap(Algorithm::getName, Function.identity()));
+  }
 
   public Algorithm getAlgorithm(String algorithmName) {
-    return algorithms.stream()
-        .filter(algorithm -> algorithm.getName().equalsIgnoreCase(algorithmName))
-        .findFirst()
-        .orElseThrow(() -> new RuntimeException("Algorithm not found"));
+    if (algorithmByName.get(algorithmName) == null) {
+      throw new RuntimeException("Algorithm not found");
+    }
+    return algorithmByName.get(algorithmName);
   }
 }

@@ -10,6 +10,8 @@ public interface Algorithm {
 
   String decrypt(String cipherText, byte[] key);
 
+  String updateKey(String key);
+
   String getName();
 
   default String bytesToHex(byte[] bytes) {

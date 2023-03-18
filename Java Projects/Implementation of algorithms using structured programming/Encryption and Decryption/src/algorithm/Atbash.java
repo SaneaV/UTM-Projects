@@ -1,8 +1,12 @@
 package algorithm;
 
+import java.util.stream.Collectors;
+
 public class Atbash implements Algorithm {
 
   private static final String ATBASH = "Atbash";
+  private static final String EMPTY = "";
+  private static final String[] ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(EMPTY);
 
   @Override
   public String encrypt(byte[] plainText, byte[] key) {
@@ -30,6 +34,32 @@ public class Atbash implements Algorithm {
   @Override
   public String decrypt(String cipherText, byte[] key) {
     return encrypt(cipherText.getBytes(), new StringBuilder(new String(key)).reverse().toString().getBytes());
+  }
+
+  @Override
+  public String updateKey(String key) {
+    String formattedKey = key
+        .replaceAll("[^a-zA-Z]+", EMPTY)
+        .toUpperCase()
+        .chars().mapToObj(c -> (char) c)
+        .distinct()
+        .map(Object::toString)
+        .collect(Collectors.joining());
+
+    if (formattedKey.length() % 2 != 0) {
+      formattedKey += getLetter(formattedKey);
+    }
+
+    return formattedKey;
+  }
+
+  private String getLetter(String key) {
+    for (String letter : ALPHABET) {
+      if (!key.contains(letter)) {
+        return letter;
+      }
+    }
+    throw new RuntimeException("Wrong key");
   }
 
   @Override
