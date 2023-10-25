@@ -1,0 +1,75 @@
+#myFeedbacks,
+#leaveFeedback{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+#myFeedbacks:hover,
+#leaveFeedback:hover {
+    background-color: #0056b3;
+}
+
+.feedback-form {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#personSelect {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#feedbackText {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+select {
+    max-width: 200px;
+}
+
+.feedback-item {
+    height: auto;
+    width: 1250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.feedback-details {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.feedback-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+.feedback-item h1 {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+}

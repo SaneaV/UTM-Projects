@@ -1,0 +1,52 @@
+.member-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-item {
+    position: relative;
+    width: 300px;
+    height: 510px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: red;
+}
+
+.member-image {
+    height: 250px;
+    width: 250px;
+}
+
+.member-details {
+    font-size: 1rem;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 10;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.member-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}

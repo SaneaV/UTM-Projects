@@ -1,0 +1,58 @@
+#centralContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85.8vh;
+}
+
+#changePhoto, #changePassword, #mainInfo{
+    width: 300px;
+    height: 50vh;
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin-left: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#changePhoto img {
+    max-width: 100%;
+    max-height: 250px;
+}
+
+#photoUpload {
+    border: none;
+}
+
+#uploadButton, #saveButton, #savePasswordButton{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#uploadButton:hover, #saveButton:hover {
+    background-color: #0056b3;
+}
+
+input[type="password"] {
+    max-width: 200px;
+    max-height: 30px;
+}
+
+#statusMessage {
+    padding-top: 10px;
+}

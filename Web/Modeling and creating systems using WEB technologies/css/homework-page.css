@@ -1,0 +1,126 @@
+.homework-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.homework-item {
+    height: auto;
+    width: 1250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.homework-details {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.homework-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+.homework-item h1 {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+}
+
+.homework-item input[type="file"] {
+    margin-top: 10px;
+    width: 300px;
+    border: none;
+}
+
+.homework-item input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.homework-item input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-homework {
+    display: flex; 
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.homework-checkbox {
+    margin-right: 10px;
+}
+
+input[type="checkbox"][disabled][checked] {
+    filter: invert(100%) hue-rotate(18deg) brightness(5);
+}
+
+input[type="checkbox"][disabled] {
+    filter: invert(100%) hue-rotate(18deg) brightness(5);
+}
+
+#internsHomeworkPage,
+#homeworksPage {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+#internsHomeworkPage:hover,
+#homeworksPage:hover {
+    background-color: #0056b3;
+}
+
+#download {
+    max-height: 15px;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+#intern-name {
+    display: block;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.homework-intern-details {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: -25px;
+}
+
+.close-button {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: red;
+}
