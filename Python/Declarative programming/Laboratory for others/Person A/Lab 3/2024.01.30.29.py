@@ -17,18 +17,22 @@ kebabs_arabic = df[df["Product Name"].str.contains(regex_arabic, regex=True)]
 # Находим минимальные и максимальные цены для каждой категории
 min_price_pui = kebabs_pui["Product Price"].apply(lambda x: float(x.replace(',', '.'))).min()
 max_price_pui = kebabs_pui["Product Price"].apply(lambda x: float(x.replace(',', '.'))).max()
+avg_price_pui = kebabs_pui["Product Price"].apply(lambda x: float(x.replace(',', '.'))).mean()
 
 min_price_vita = kebabs_vita["Product Price"].apply(lambda x: float(x.replace(',', '.'))).min()
 max_price_vita = kebabs_vita["Product Price"].apply(lambda x: float(x.replace(',', '.'))).max()
+avg_price_vita = kebabs_vita["Product Price"].apply(lambda x: float(x.replace(',', '.'))).mean()
 
 min_price_arabic = kebabs_arabic["Product Price"].apply(lambda x: float(x.replace(',', '.'))).min()
 max_price_arabic = kebabs_arabic["Product Price"].apply(lambda x: float(x.replace(',', '.'))).max()
+avg_price_arabic = kebabs_arabic["Product Price"].apply(lambda x: float(x.replace(',', '.'))).mean()
 
 # Создаем DataFrame с результатами
 results_df = pd.DataFrame({
     "Категория": ["Кебаб с курицей", "Кебаб с говядиной", "Арабский кебаб"],
     "Минимальная цена": [min_price_pui, min_price_vita, min_price_arabic],
-    "Максимальная цена": [max_price_pui, max_price_vita, max_price_arabic]
+    "Максимальная цена": [max_price_pui, max_price_vita, max_price_arabic],
+    "Средняя цена": [avg_price_pui, avg_price_vita, avg_price_arabic]
 })
 
 # Записываем DataFrame с результатами в новый CSV-файл
