@@ -3,26 +3,26 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
-# URL of the webpage
+# URL веб-страницы
 url = "https://glovoapp.com/md/ro/chisinau/fast-kebab/?content=kebab-c.1425828441"
 
-# Send a GET request to the URL
+# Отправка GET-запроса на URL
 response = requests.get(url)
 
-# Check if the request was successful (status code 200)
+# Проверка успешности запроса (статус код 200)
 if response.status_code == 200:
-    # Parse the HTML content using BeautifulSoup
+    # Разбор HTML-контента с помощью BeautifulSoup
     soup = BeautifulSoup(response.text, "html.parser")
     soup = soup.find("div", id="kebab-s.3009214461")
 
-    # Extract information based on the HTML structure
+    # Извлечение информации на основе структуры HTML
     products = []
 
     list_title_element = soup.find("p", class_="list__title")
     if list_title_element:
         list_title = list_title_element.text.strip()
 
-        # Find all product elements
+        # Поиск всех элементов продуктов
         product_elements = soup.find_all("div", class_="product-row")
         for product_element in product_elements:
             product_name_element = product_element.find(
@@ -40,32 +40,32 @@ if response.status_code == 200:
 
                 product_price = None
                 if product_price_element:
-                    # Use regular expression to extract numeric part
+                    # Использование регулярного выражения для извлечения числовой части
                     match = re.search(r"\d+,\d+", product_price_element.text)
                     if match:
                         product_price = match.group()
 
                 products.append(
                     {
-                        "List Title": list_title,
-                        "Product Name": product_name,
-                        "Product Price": product_price,
+                        "Название списка": list_title,
+                        "Название продукта": product_name,
+                        "Цена продукта": product_price,
                     }
                 )
 
-    # Write the information to a CSV file
-    csv_filename = "Fast Kebab.csv"
+    # Запись информации в файл CSV
+    csv_filename = "Lab 2/Fast Kebab.csv"
     with open(csv_filename, "w", newline="", encoding="utf-8") as csvfile:
-        fieldnames = ["List Title", "Product Name", "Product Price"]
+        fieldnames = ["Название списка", "Название продукта", "Цена продукта"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        # Write header
+        # Запись заголовка
         writer.writeheader()
 
-        # Write data
+        # Запись данных
         for product in products:
             writer.writerow(product)
 
-    print(f"Information written to {csv_filename}")
+    print(f"Информация записана в {csv_filename}")
 else:
-    print("Failed to retrieve the webpage. Status code:", response.status_code)
+    print("Не удалось получить веб-страницу. Код статуса:", response.status_code)

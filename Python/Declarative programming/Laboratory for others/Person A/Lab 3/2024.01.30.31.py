@@ -9,7 +9,7 @@ def filter_by_ingredient(input_file, ingredient):
     regex_ingredient = re.compile(fr"\b{re.escape(ingredient)}\b", re.IGNORECASE)
 
     # Фильтруем DataFrame на основе регулярного выражения
-    filtered_df = df[df["Product Name"].str.contains(regex_ingredient, regex=True)]
+    filtered_df = df[df["Название продукта"].str.contains(regex_ingredient, regex=True)]
 
     if not filtered_df.empty:
         # Выводим результаты, если записи найдены
@@ -19,6 +19,6 @@ def filter_by_ingredient(input_file, ingredient):
         print(f"Кебаб с ингредиентом '{ingredient}' не найден.")
 
 # Пример использования
-input_file = "merged_data.csv"
+input_file = "Lab 3/merged_data.csv"
 ingredient_to_find = input("Введите ингредиент кебаба: ")
 filter_by_ingredient(input_file, ingredient_to_find)

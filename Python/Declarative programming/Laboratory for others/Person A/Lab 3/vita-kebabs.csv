@@ -1,9 +1,11 @@
-List Title,Product Name,Product Price
+Название списка,Название продукта,Цена продукта
+KEBAB,Kebab de vita,"94,00"
 KEBAB,Baget kebab de Vita,"95,00"
-KEBAB,Kebab de Vita,"85,00"
-KEBAB,Meniu kebab arabic de vita,"130,00"
+KEBAB,Kebab de Vita,"90,00"
+KEBAB,Burger de Vita,"77,00"
 KEBAB,Meniu kebab de vita mare,"120,00"
+KEBAB,Meniu kebab arabic de vita,"120,00"
 KEBAB,Meniu kebab de vita mic,"110,00"
-KEBAB,Kebab arabic de vita,"100,00"
-KEBAB,Kebab de vita mare,"95,00"
-KEBAB,Kebab de vita mic,"90,00"
+KEBAB,Kebab arabic de vita,"85,00"
+KEBAB,Kebab de vita mare,"80,00"
+KEBAB,Kebab de vita mic,"70,00"
