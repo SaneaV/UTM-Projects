@@ -16,3 +16,4 @@ xlabel('timpul (s)');
 
 % Добавление подписи по оси y
 ylabel('yi(t)');
+
