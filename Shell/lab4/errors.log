@@ -1,0 +1,324 @@
+/var/log/kern.log:2024-09-19T11:41:53.375082+03:00 alexandr-VirtualBox kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/kern.log:2024-09-19T11:41:53.375100+03:00 alexandr-VirtualBox kernel: ACPI: Early table checksum verification disabled
+/var/log/kern.log:2024-09-19T11:41:53.375103+03:00 alexandr-VirtualBox kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/kern.log:2024-09-19T11:41:53.375104+03:00 alexandr-VirtualBox kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/kern.log:2024-09-19T11:41:53.375104+03:00 alexandr-VirtualBox kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/kern.log:2024-09-19T11:41:53.375105+03:00 alexandr-VirtualBox kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/kern.log:2024-09-19T11:41:53.375105+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/kern.log:2024-09-19T11:41:53.375106+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/kern.log:2024-09-19T11:41:53.375108+03:00 alexandr-VirtualBox kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/kern.log:2024-09-19T11:41:53.375111+03:00 alexandr-VirtualBox kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/kern.log:2024-09-19T11:41:53.375112+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/kern.log:2024-09-19T11:41:53.375373+03:00 alexandr-VirtualBox kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/kern.log:2024-09-19T11:41:53.375375+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/kern.log:2024-09-19T11:41:53.375376+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/kern.log:2024-09-19T11:41:53.375377+03:00 alexandr-VirtualBox kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/kern.log:2024-09-19T11:41:53.375385+03:00 alexandr-VirtualBox kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/kern.log:2024-09-19T11:41:53.375402+03:00 alexandr-VirtualBox kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/kern.log:2024-09-19T11:41:53.375403+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/kern.log:2024-09-19T11:41:53.375403+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/kern.log:2024-09-19T11:41:53.375403+03:00 alexandr-VirtualBox kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/kern.log:2024-09-19T11:41:53.378873+03:00 alexandr-VirtualBox kernel: ACPI: Core revision 20230628
+/var/log/kern.log:2024-09-19T11:41:53.378904+03:00 alexandr-VirtualBox kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+/var/log/kern.log:2024-09-19T11:41:53.378908+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Module Device)
+/var/log/kern.log:2024-09-19T11:41:53.378909+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Processor Device)
+/var/log/kern.log:2024-09-19T11:41:53.378910+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+/var/log/kern.log:2024-09-19T11:41:53.378910+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Processor Aggregator Device)
+/var/log/kern.log:2024-09-19T11:41:53.378911+03:00 alexandr-VirtualBox kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+/var/log/kern.log:2024-09-19T11:41:53.378911+03:00 alexandr-VirtualBox kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+/var/log/kern.log:2024-09-19T11:41:53.378918+03:00 alexandr-VirtualBox kernel: ACPI: Interpreter enabled
+/var/log/kern.log:2024-09-19T11:41:53.378919+03:00 alexandr-VirtualBox kernel: ACPI: PM: (supports S0 S5)
+/var/log/kern.log:2024-09-19T11:41:53.378920+03:00 alexandr-VirtualBox kernel: ACPI: Using IOAPIC for interrupt routing
+/var/log/kern.log:2024-09-19T11:41:53.378920+03:00 alexandr-VirtualBox kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+/var/log/kern.log:2024-09-19T11:41:53.378921+03:00 alexandr-VirtualBox kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+/var/log/kern.log:2024-09-19T11:41:53.378925+03:00 alexandr-VirtualBox kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+/var/log/kern.log:2024-09-19T11:41:53.379083+03:00 alexandr-VirtualBox kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+/var/log/kern.log:2024-09-19T11:41:53.379091+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+/var/log/kern.log:2024-09-19T11:41:53.379094+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+/var/log/kern.log:2024-09-19T11:41:53.379095+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+/var/log/kern.log:2024-09-19T11:41:53.379095+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+/var/log/kern.log:2024-09-19T11:41:53.379100+03:00 alexandr-VirtualBox kernel: ACPI: bus type USB registered
+/var/log/kern.log:2024-09-19T11:41:53.379113+03:00 alexandr-VirtualBox kernel: PCI: Using ACPI for IRQ routing
+/var/log/kern.log:2024-09-19T11:41:53.379125+03:00 alexandr-VirtualBox kernel: pnp: PnP ACPI init
+/var/log/kern.log:2024-09-19T11:41:53.379126+03:00 alexandr-VirtualBox kernel: pnp: PnP ACPI: found 2 devices
+/var/log/kern.log:2024-09-19T11:41:53.379191+03:00 alexandr-VirtualBox kernel: ACPI: AC: AC Adapter [AC] (on-line)
+/var/log/kern.log:2024-09-19T11:41:53.379307+03:00 alexandr-VirtualBox kernel: ACPI: button: Power Button [PWRF]
+/var/log/kern.log:2024-09-19T11:41:53.379309+03:00 alexandr-VirtualBox kernel: ACPI: button: Sleep Button [SLPF]
+/var/log/kern.log:2024-09-19T11:41:53.379315+03:00 alexandr-VirtualBox kernel: ACPI: battery: Slot [BAT0] (battery present)
+/var/log/kern.log:2024-09-19T11:41:53.379328+03:00 alexandr-VirtualBox kernel: ACPI: bus type drm_connector registered
+/var/log/kern.log:2024-09-19T11:41:53.379389+03:00 alexandr-VirtualBox kernel: amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+/var/log/kern.log:2024-09-19T11:41:53.380313+03:00 alexandr-VirtualBox kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+/var/log/kern.log:2024-09-19T14:51:58.566554+03:00 alexandr-VirtualBox kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/kern.log:2024-09-19T14:51:58.579113+03:00 alexandr-VirtualBox kernel: ACPI: Early table checksum verification disabled
+/var/log/kern.log:2024-09-19T14:51:58.579124+03:00 alexandr-VirtualBox kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/kern.log:2024-09-19T14:51:58.579125+03:00 alexandr-VirtualBox kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/kern.log:2024-09-19T14:51:58.579125+03:00 alexandr-VirtualBox kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/kern.log:2024-09-19T14:51:58.579126+03:00 alexandr-VirtualBox kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/kern.log:2024-09-19T14:51:58.579126+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/kern.log:2024-09-19T14:51:58.579127+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/kern.log:2024-09-19T14:51:58.579129+03:00 alexandr-VirtualBox kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/kern.log:2024-09-19T14:51:58.579133+03:00 alexandr-VirtualBox kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/kern.log:2024-09-19T14:51:58.579134+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/kern.log:2024-09-19T14:51:58.579134+03:00 alexandr-VirtualBox kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/kern.log:2024-09-19T14:51:58.579135+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/kern.log:2024-09-19T14:51:58.579135+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/kern.log:2024-09-19T14:51:58.579136+03:00 alexandr-VirtualBox kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/kern.log:2024-09-19T14:51:58.579139+03:00 alexandr-VirtualBox kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/kern.log:2024-09-19T14:51:58.579156+03:00 alexandr-VirtualBox kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/kern.log:2024-09-19T14:51:58.579157+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/kern.log:2024-09-19T14:51:58.579158+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/kern.log:2024-09-19T14:51:58.579158+03:00 alexandr-VirtualBox kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/kern.log:2024-09-19T14:51:58.579373+03:00 alexandr-VirtualBox kernel: ACPI: Core revision 20230628
+/var/log/dmesg.0:[    0.000000] kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/dmesg.0:[    0.007228] kernel: ACPI: Early table checksum verification disabled
+/var/log/dmesg.0:[    0.007240] kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/dmesg.0:[    0.007248] kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/dmesg.0:[    0.007256] kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/dmesg.0:[    0.007263] kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/dmesg.0:[    0.007267] kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/dmesg.0:[    0.007270] kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/dmesg.0:[    0.007274] kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/dmesg.0:[    0.007278] kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/dmesg.0:[    0.007281] kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/dmesg.0:[    0.007284] kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/dmesg.0:[    0.007285] kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/dmesg.0:[    0.007286] kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/dmesg.0:[    0.007288] kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/dmesg.0:[    0.007289] kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/dmesg.0:[    1.336313] kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/dmesg.0:[    1.336849] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/dmesg.0:[    1.336852] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/dmesg.0:[    1.336858] kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/dmesg.0:[    1.761049] kernel: ACPI: Core revision 20230628
+/var/log/dmesg.0:[    2.049771] kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+/var/log/dmesg.0:[    2.082960] kernel: ACPI: Added _OSI(Module Device)
+/var/log/dmesg.0:[    2.082965] kernel: ACPI: Added _OSI(Processor Device)
+/var/log/dmesg.0:[    2.082968] kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+/var/log/dmesg.0:[    2.082971] kernel: ACPI: Added _OSI(Processor Aggregator Device)
+/var/log/dmesg.0:[    2.092662] kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+/var/log/dmesg.0:[    2.104762] kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+/var/log/dmesg.0:[    2.105838] kernel: ACPI: Interpreter enabled
+/var/log/dmesg.0:[    2.105853] kernel: ACPI: PM: (supports S0 S5)
+/var/log/dmesg.0:[    2.105856] kernel: ACPI: Using IOAPIC for interrupt routing
+/var/log/dmesg.0:[    2.106608] kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+/var/log/dmesg.0:[    2.106608] kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+/var/log/dmesg.0:[    2.136732] kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+/var/log/dmesg.0:[    2.193184] kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+/var/log/dmesg.0:[    2.407174] kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+/var/log/dmesg.0:[    2.408771] kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+/var/log/dmesg.0:[    2.409179] kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+/var/log/dmesg.0:[    2.409748] kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+/var/log/dmesg.0:[    2.423975] kernel: ACPI: bus type USB registered
+/var/log/dmesg.0:[    2.436850] kernel: PCI: Using ACPI for IRQ routing
+/var/log/dmesg.0:[    2.457331] kernel: pnp: PnP ACPI init
+/var/log/dmesg.0:[    2.460654] kernel: pnp: PnP ACPI: found 2 devices
+/var/log/dmesg.0:[    2.682368] kernel: ACPI: AC: AC Adapter [AC] (off-line)
+/var/log/dmesg.0:[    2.684985] kernel: ACPI: button: Power Button [PWRF]
+/var/log/dmesg.0:[    2.685340] kernel: ACPI: button: Sleep Button [SLPF]
+/var/log/dmesg.0:[    2.691320] kernel: ACPI: battery: Slot [BAT0] (battery present)
+/var/log/dmesg.0:[    2.788889] kernel: ACPI: bus type drm_connector registered
+/var/log/dmesg.0:[    2.905347] kernel: amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+/var/log/dmesg.0:[    4.556751] kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+/var/log/syslog:2024-09-19T11:41:53.375082+03:00 alexandr-VirtualBox kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/syslog:2024-09-19T11:41:53.375100+03:00 alexandr-VirtualBox kernel: ACPI: Early table checksum verification disabled
+/var/log/syslog:2024-09-19T11:41:53.375103+03:00 alexandr-VirtualBox kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/syslog:2024-09-19T11:41:53.375104+03:00 alexandr-VirtualBox kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/syslog:2024-09-19T11:41:53.375104+03:00 alexandr-VirtualBox kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/syslog:2024-09-19T11:41:53.375105+03:00 alexandr-VirtualBox kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/syslog:2024-09-19T11:41:53.375105+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/syslog:2024-09-19T11:41:53.375106+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/syslog:2024-09-19T11:41:53.375108+03:00 alexandr-VirtualBox kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/syslog:2024-09-19T11:41:53.375111+03:00 alexandr-VirtualBox kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/syslog:2024-09-19T11:41:53.375112+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/syslog:2024-09-19T11:41:53.375373+03:00 alexandr-VirtualBox kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/syslog:2024-09-19T11:41:53.375375+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/syslog:2024-09-19T11:41:53.375376+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/syslog:2024-09-19T11:41:53.375377+03:00 alexandr-VirtualBox kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/syslog:2024-09-19T11:41:53.375385+03:00 alexandr-VirtualBox kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/syslog:2024-09-19T11:41:53.375402+03:00 alexandr-VirtualBox kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/syslog:2024-09-19T11:41:53.375403+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/syslog:2024-09-19T11:41:53.375403+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/syslog:2024-09-19T11:41:53.375403+03:00 alexandr-VirtualBox kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/syslog:2024-09-19T11:41:53.378873+03:00 alexandr-VirtualBox kernel: ACPI: Core revision 20230628
+/var/log/syslog:2024-09-19T11:41:53.378904+03:00 alexandr-VirtualBox kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+/var/log/syslog:2024-09-19T11:41:53.378908+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Module Device)
+/var/log/syslog:2024-09-19T11:41:53.378909+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Processor Device)
+/var/log/syslog:2024-09-19T11:41:53.378910+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+/var/log/syslog:2024-09-19T11:41:53.378910+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Processor Aggregator Device)
+/var/log/syslog:2024-09-19T11:41:53.378911+03:00 alexandr-VirtualBox kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+/var/log/syslog:2024-09-19T11:41:53.378911+03:00 alexandr-VirtualBox kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+/var/log/syslog:2024-09-19T11:41:53.378918+03:00 alexandr-VirtualBox kernel: ACPI: Interpreter enabled
+/var/log/syslog:2024-09-19T11:41:53.378919+03:00 alexandr-VirtualBox kernel: ACPI: PM: (supports S0 S5)
+/var/log/syslog:2024-09-19T11:41:53.378920+03:00 alexandr-VirtualBox kernel: ACPI: Using IOAPIC for interrupt routing
+/var/log/syslog:2024-09-19T11:41:53.378920+03:00 alexandr-VirtualBox kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+/var/log/syslog:2024-09-19T11:41:53.378921+03:00 alexandr-VirtualBox kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+/var/log/syslog:2024-09-19T11:41:53.378925+03:00 alexandr-VirtualBox kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+/var/log/syslog:2024-09-19T11:41:53.379083+03:00 alexandr-VirtualBox kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+/var/log/syslog:2024-09-19T11:41:53.379091+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+/var/log/syslog:2024-09-19T11:41:53.379094+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+/var/log/syslog:2024-09-19T11:41:53.379095+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+/var/log/syslog:2024-09-19T11:41:53.379095+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+/var/log/syslog:2024-09-19T11:41:53.379100+03:00 alexandr-VirtualBox kernel: ACPI: bus type USB registered
+/var/log/syslog:2024-09-19T11:41:53.379113+03:00 alexandr-VirtualBox kernel: PCI: Using ACPI for IRQ routing
+/var/log/syslog:2024-09-19T11:41:53.379125+03:00 alexandr-VirtualBox kernel: pnp: PnP ACPI init
+/var/log/syslog:2024-09-19T11:41:53.379126+03:00 alexandr-VirtualBox kernel: pnp: PnP ACPI: found 2 devices
+/var/log/syslog:2024-09-19T11:41:53.379191+03:00 alexandr-VirtualBox kernel: ACPI: AC: AC Adapter [AC] (on-line)
+/var/log/syslog:2024-09-19T11:41:53.379307+03:00 alexandr-VirtualBox kernel: ACPI: button: Power Button [PWRF]
+/var/log/syslog:2024-09-19T11:41:53.379309+03:00 alexandr-VirtualBox kernel: ACPI: button: Sleep Button [SLPF]
+/var/log/syslog:2024-09-19T11:41:53.379315+03:00 alexandr-VirtualBox kernel: ACPI: battery: Slot [BAT0] (battery present)
+/var/log/syslog:2024-09-19T11:41:53.379328+03:00 alexandr-VirtualBox kernel: ACPI: bus type drm_connector registered
+/var/log/syslog:2024-09-19T11:41:53.379389+03:00 alexandr-VirtualBox kernel: amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+/var/log/syslog:2024-09-19T11:41:53.380313+03:00 alexandr-VirtualBox kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+/var/log/syslog:2024-09-19T11:41:53.383481+03:00 alexandr-VirtualBox sensors[728]: Adapter: ACPI interface
+/var/log/syslog:2024-09-19T14:51:58.566554+03:00 alexandr-VirtualBox kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/syslog:2024-09-19T14:51:58.569780+03:00 alexandr-VirtualBox sensors[739]: Adapter: ACPI interface
+/var/log/syslog:2024-09-19T14:51:58.579113+03:00 alexandr-VirtualBox kernel: ACPI: Early table checksum verification disabled
+/var/log/syslog:2024-09-19T14:51:58.579124+03:00 alexandr-VirtualBox kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/syslog:2024-09-19T14:51:58.579125+03:00 alexandr-VirtualBox kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/syslog:2024-09-19T14:51:58.579125+03:00 alexandr-VirtualBox kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/syslog:2024-09-19T14:51:58.579126+03:00 alexandr-VirtualBox kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/syslog:2024-09-19T14:51:58.579126+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/syslog:2024-09-19T14:51:58.579127+03:00 alexandr-VirtualBox kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/syslog:2024-09-19T14:51:58.579129+03:00 alexandr-VirtualBox kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/syslog:2024-09-19T14:51:58.579133+03:00 alexandr-VirtualBox kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/syslog:2024-09-19T14:51:58.579134+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/syslog:2024-09-19T14:51:58.579134+03:00 alexandr-VirtualBox kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/syslog:2024-09-19T14:51:58.579135+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/syslog:2024-09-19T14:51:58.579135+03:00 alexandr-VirtualBox kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/syslog:2024-09-19T14:51:58.579136+03:00 alexandr-VirtualBox kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/syslog:2024-09-19T14:51:58.579139+03:00 alexandr-VirtualBox kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/syslog:2024-09-19T14:51:58.579156+03:00 alexandr-VirtualBox kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/syslog:2024-09-19T14:51:58.579157+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/syslog:2024-09-19T14:51:58.579158+03:00 alexandr-VirtualBox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/syslog:2024-09-19T14:51:58.579158+03:00 alexandr-VirtualBox kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/syslog:2024-09-19T14:51:58.579373+03:00 alexandr-VirtualBox kernel: ACPI: Core revision 20230628
+/var/log/syslog:2024-09-19T14:51:58.581467+03:00 alexandr-VirtualBox kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+/var/log/syslog:2024-09-19T14:51:58.581472+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Module Device)
+/var/log/syslog:2024-09-19T14:51:58.581473+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Processor Device)
+/var/log/syslog:2024-09-19T14:51:58.581473+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+/var/log/syslog:2024-09-19T14:51:58.581474+03:00 alexandr-VirtualBox kernel: ACPI: Added _OSI(Processor Aggregator Device)
+/var/log/syslog:2024-09-19T14:51:58.581474+03:00 alexandr-VirtualBox kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+/var/log/syslog:2024-09-19T14:51:58.581477+03:00 alexandr-VirtualBox kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+/var/log/syslog:2024-09-19T14:51:58.581477+03:00 alexandr-VirtualBox kernel: ACPI: Interpreter enabled
+/var/log/syslog:2024-09-19T14:51:58.581478+03:00 alexandr-VirtualBox kernel: ACPI: PM: (supports S0 S5)
+/var/log/syslog:2024-09-19T14:51:58.581478+03:00 alexandr-VirtualBox kernel: ACPI: Using IOAPIC for interrupt routing
+/var/log/syslog:2024-09-19T14:51:58.581479+03:00 alexandr-VirtualBox kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+/var/log/syslog:2024-09-19T14:51:58.581494+03:00 alexandr-VirtualBox kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+/var/log/syslog:2024-09-19T14:51:58.581495+03:00 alexandr-VirtualBox kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+/var/log/syslog:2024-09-19T14:51:58.581650+03:00 alexandr-VirtualBox kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+/var/log/syslog:2024-09-19T14:51:58.581665+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+/var/log/syslog:2024-09-19T14:51:58.581666+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+/var/log/syslog:2024-09-19T14:51:58.581666+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+/var/log/syslog:2024-09-19T14:51:58.581667+03:00 alexandr-VirtualBox kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+/var/log/syslog:2024-09-19T14:51:58.581736+03:00 alexandr-VirtualBox kernel: ACPI: bus type USB registered
+/var/log/syslog:2024-09-19T14:51:58.581763+03:00 alexandr-VirtualBox kernel: PCI: Using ACPI for IRQ routing
+/var/log/syslog:2024-09-19T14:51:58.581809+03:00 alexandr-VirtualBox kernel: pnp: PnP ACPI init
+/var/log/syslog:2024-09-19T14:51:58.581809+03:00 alexandr-VirtualBox kernel: pnp: PnP ACPI: found 2 devices
+/var/log/syslog:2024-09-19T14:51:58.581859+03:00 alexandr-VirtualBox kernel: ACPI: AC: AC Adapter [AC] (on-line)
+/var/log/syslog:2024-09-19T14:51:58.581860+03:00 alexandr-VirtualBox kernel: ACPI: button: Power Button [PWRF]
+/var/log/syslog:2024-09-19T14:51:58.581964+03:00 alexandr-VirtualBox kernel: ACPI: button: Sleep Button [SLPF]
+/var/log/syslog:2024-09-19T14:51:58.581969+03:00 alexandr-VirtualBox kernel: ACPI: battery: Slot [BAT0] (battery present)
+/var/log/syslog:2024-09-19T14:51:58.582013+03:00 alexandr-VirtualBox kernel: ACPI: bus type drm_connector registered
+/var/log/syslog:2024-09-19T14:51:58.582073+03:00 alexandr-VirtualBox kernel: amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+/var/log/syslog:2024-09-19T14:51:58.585385+03:00 alexandr-VirtualBox kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+/var/log/installer/syslog:2024-09-19T07:58:00.873824+00:00 mint kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/installer/syslog:2024-09-19T07:58:00.873840+00:00 mint kernel: ACPI: Early table checksum verification disabled
+/var/log/installer/syslog:2024-09-19T07:58:00.873840+00:00 mint kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/installer/syslog:2024-09-19T07:58:00.873843+00:00 mint kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/installer/syslog:2024-09-19T07:58:00.873843+00:00 mint kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/installer/syslog:2024-09-19T07:58:00.873844+00:00 mint kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/installer/syslog:2024-09-19T07:58:00.873844+00:00 mint kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/installer/syslog:2024-09-19T07:58:00.873845+00:00 mint kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/installer/syslog:2024-09-19T07:58:00.873847+00:00 mint kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/installer/syslog:2024-09-19T07:58:00.873850+00:00 mint kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/installer/syslog:2024-09-19T07:58:00.873850+00:00 mint kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/installer/syslog:2024-09-19T07:58:00.873851+00:00 mint kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/installer/syslog:2024-09-19T07:58:00.873851+00:00 mint kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/installer/syslog:2024-09-19T07:58:00.873851+00:00 mint kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/installer/syslog:2024-09-19T07:58:00.873852+00:00 mint kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/installer/syslog:2024-09-19T07:58:00.873855+00:00 mint kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/installer/syslog:2024-09-19T07:58:00.873870+00:00 mint kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/installer/syslog:2024-09-19T07:58:00.873870+00:00 mint kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/installer/syslog:2024-09-19T07:58:00.873871+00:00 mint kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/installer/syslog:2024-09-19T07:58:00.873871+00:00 mint kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/installer/syslog:2024-09-19T07:58:00.874010+00:00 mint kernel: ACPI: Core revision 20230628
+/var/log/installer/syslog:2024-09-19T07:58:00.874062+00:00 mint kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+/var/log/installer/syslog:2024-09-19T07:58:00.874064+00:00 mint kernel: ACPI: Added _OSI(Module Device)
+/var/log/installer/syslog:2024-09-19T07:58:00.874067+00:00 mint kernel: ACPI: Added _OSI(Processor Device)
+/var/log/installer/syslog:2024-09-19T07:58:00.874067+00:00 mint kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+/var/log/installer/syslog:2024-09-19T07:58:00.874068+00:00 mint kernel: ACPI: Added _OSI(Processor Aggregator Device)
+/var/log/installer/syslog:2024-09-19T07:58:00.874068+00:00 mint kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+/var/log/installer/syslog:2024-09-19T07:58:00.874069+00:00 mint kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+/var/log/installer/syslog:2024-09-19T07:58:00.874069+00:00 mint kernel: ACPI: Interpreter enabled
+/var/log/installer/syslog:2024-09-19T07:58:00.874072+00:00 mint kernel: ACPI: PM: (supports S0 S5)
+/var/log/installer/syslog:2024-09-19T07:58:00.874072+00:00 mint kernel: ACPI: Using IOAPIC for interrupt routing
+/var/log/installer/syslog:2024-09-19T07:58:00.874072+00:00 mint kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+/var/log/installer/syslog:2024-09-19T07:58:00.874073+00:00 mint kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+/var/log/installer/syslog:2024-09-19T07:58:00.874074+00:00 mint kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+/var/log/installer/syslog:2024-09-19T07:58:00.874220+00:00 mint kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+/var/log/installer/syslog:2024-09-19T07:58:00.874233+00:00 mint kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+/var/log/installer/syslog:2024-09-19T07:58:00.874234+00:00 mint kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+/var/log/installer/syslog:2024-09-19T07:58:00.874234+00:00 mint kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+/var/log/installer/syslog:2024-09-19T07:58:00.874239+00:00 mint kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+/var/log/installer/syslog:2024-09-19T07:58:00.874241+00:00 mint kernel: ACPI: bus type USB registered
+/var/log/installer/syslog:2024-09-19T07:58:00.874794+00:00 mint kernel: PCI: Using ACPI for IRQ routing
+/var/log/installer/syslog:2024-09-19T07:58:00.875060+00:00 mint kernel: pnp: PnP ACPI init
+/var/log/installer/syslog:2024-09-19T07:58:00.875060+00:00 mint kernel: pnp: PnP ACPI: found 2 devices
+/var/log/installer/syslog:2024-09-19T07:58:00.875075+00:00 mint kernel: ACPI: AC: AC Adapter [AC] (on-line)
+/var/log/installer/syslog:2024-09-19T07:58:00.875076+00:00 mint kernel: ACPI: button: Power Button [PWRF]
+/var/log/installer/syslog:2024-09-19T07:58:00.875077+00:00 mint kernel: ACPI: button: Sleep Button [SLPF]
+/var/log/installer/syslog:2024-09-19T07:58:00.875181+00:00 mint kernel: ACPI: battery: Slot [BAT0] (battery present)
+/var/log/installer/syslog:2024-09-19T07:58:00.875184+00:00 mint kernel: ACPI: bus type drm_connector registered
+/var/log/installer/syslog:2024-09-19T07:58:00.875203+00:00 mint kernel: amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+/var/log/installer/syslog:2024-09-19T07:58:00.875330+00:00 mint kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+/var/log/installer/syslog:2024-09-19T07:58:00.876504+00:00 mint sensors[1206]: Adapter: ACPI interface
+/var/log/dmesg:[    0.000000] kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+/var/log/dmesg:[    0.003110] kernel: ACPI: Early table checksum verification disabled
+/var/log/dmesg:[    0.003114] kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+/var/log/dmesg:[    0.003118] kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+/var/log/dmesg:[    0.003123] kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+/var/log/dmesg:[    0.003128] kernel: ACPI: DSDT 0x00000000DFFF0630 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+/var/log/dmesg:[    0.003131] kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/dmesg:[    0.003133] kernel: ACPI: FACS 0x00000000DFFF0200 000040
+/var/log/dmesg:[    0.003135] kernel: ACPI: APIC 0x00000000DFFF0240 00007C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+/var/log/dmesg:[    0.003137] kernel: ACPI: SSDT 0x00000000DFFF02C0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+/var/log/dmesg:[    0.003139] kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+/var/log/dmesg:[    0.003141] kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0630-0xdfff2982]
+/var/log/dmesg:[    0.003141] kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/dmesg:[    0.003142] kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+/var/log/dmesg:[    0.003143] kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff02bb]
+/var/log/dmesg:[    0.003143] kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02c0-0xdfff062b]
+/var/log/dmesg:[    0.586487] kernel: ACPI: PM-Timer IO Port: 0x4008
+/var/log/dmesg:[    0.586836] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+/var/log/dmesg:[    0.586838] kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+/var/log/dmesg:[    0.586842] kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+/var/log/dmesg:[    0.907864] kernel: ACPI: Core revision 20230628
+/var/log/dmesg:[    1.141942] kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+/var/log/dmesg:[    1.173381] kernel: ACPI: Added _OSI(Module Device)
+/var/log/dmesg:[    1.173386] kernel: ACPI: Added _OSI(Processor Device)
+/var/log/dmesg:[    1.173388] kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+/var/log/dmesg:[    1.173391] kernel: ACPI: Added _OSI(Processor Aggregator Device)
+/var/log/dmesg:[    1.182614] kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+/var/log/dmesg:[    1.238840] kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+/var/log/dmesg:[    1.239168] kernel: ACPI: Interpreter enabled
+/var/log/dmesg:[    1.239184] kernel: ACPI: PM: (supports S0 S5)
+/var/log/dmesg:[    1.239186] kernel: ACPI: Using IOAPIC for interrupt routing
+/var/log/dmesg:[    1.240556] kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+/var/log/dmesg:[    1.240897] kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+/var/log/dmesg:[    1.273743] kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+/var/log/dmesg:[    1.350716] kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+/var/log/dmesg:[    1.608712] kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+/var/log/dmesg:[    1.609228] kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+/var/log/dmesg:[    1.609514] kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+/var/log/dmesg:[    1.609904] kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+/var/log/dmesg:[    1.612960] kernel: ACPI: bus type USB registered
+/var/log/dmesg:[    1.619893] kernel: PCI: Using ACPI for IRQ routing
+/var/log/dmesg:[    1.634680] kernel: pnp: PnP ACPI init
+/var/log/dmesg:[    1.636069] kernel: pnp: PnP ACPI: found 2 devices
+/var/log/dmesg:[    1.802538] kernel: ACPI: AC: AC Adapter [AC] (on-line)
+/var/log/dmesg:[    1.806943] kernel: ACPI: button: Power Button [PWRF]
+/var/log/dmesg:[    1.807295] kernel: ACPI: button: Sleep Button [SLPF]
+/var/log/dmesg:[    1.817607] kernel: ACPI: battery: Slot [BAT0] (battery present)
+/var/log/dmesg:[    1.890157] kernel: ACPI: bus type drm_connector registered
+/var/log/dmesg:[    1.997133] kernel: amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+/var/log/dmesg:[    3.263248] kernel: ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)

@@ -1,0 +1,9 @@
+Information: 	(++) from command line, (!!) notice, (II) informational,
+Information: [    21.397] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input0/event0"
+Information: [    21.432] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSLPBN:00/input/input1/event1"
+Information: [    21.547] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4/event3"
+Information: [    21.583] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:04.0/input/input7/event6"
+Information: [    21.615] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6/event5"
+Information: [    21.653] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input2/event2"
+Information: [    21.680] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input5/event4"
+Warning: 	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
