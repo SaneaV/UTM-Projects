@@ -673,3 +673,14 @@ SELECT Contract_ID, Section_ID, Client_ID, Start_Date, End_Date
 INTO recent_contracts
 FROM Contracts
 WHERE Start_Date > '2024-01-01';
+
+SELECT Section_ID, Section_Name
+FROM Sections
+WHERE Section_ID BETWEEN 
+    (SELECT MIN(Section_ID)
+     FROM Contracts
+     WHERE Start_Date >= '2024-01-01' AND Start_Date <= '2024-12-31')
+    AND 
+    (SELECT MAX(Section_ID)
+     FROM Contracts
+     WHERE Start_Date >= '2024-01-01' AND Start_Date <= '2024-12-31');
