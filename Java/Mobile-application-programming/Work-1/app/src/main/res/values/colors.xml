@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Цвет фона -->
+        <color name="colorPrimary">#2C1EB0</color>
+        <color name="colorPrimaryVariant">#1A147D</color>
+        <color name="colorOnPrimary">#000000</color>
+
+        <!-- Другие стандартные цвета -->
+        <color name="colorSecondary">#FF4081</color>
+        <color name="colorSecondaryVariant">#F50057</color>
+        <color name="colorOnSecondary">#000000</color>
+
+        <!-- Цвет фона -->
+        <color name="colorBackground">#FFFFFF</color>
+        <color name="colorSurface">#FFFFFF</color>
+        <color name="colorOnSurface">#000000</color>
+</resources>

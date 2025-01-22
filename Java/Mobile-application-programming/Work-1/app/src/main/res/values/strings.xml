@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bas-TV</string>
+    <string name="open_original_link">Продолжить чтение в источнике</string>
+    <string name="bas_tv">BAS-TV</string>
+    <string name="subscribe">Подписаться на новости</string>
+    <string name="search">Поиск</string>
+</resources>
