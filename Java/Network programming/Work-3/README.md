@@ -27,7 +27,7 @@
 
 ```sh
 mvn compile
-mvn exec:java -Dexec.mainClass="org.example.DNSResolverApp"
+mvn exec:java"
 ```
 
 #### Примеры Использования
