@@ -3,7 +3,6 @@
 -- Переход на базу данных master, так как операции по удалению и изменению базы данных можно проводить только из неё
 USE master;
 GO
-
 -- Проверка и удаление базы данных MoldovanEmploymentDB, если она существует
 -- Если база данных MoldovanEmploymentDB существует, выполняется её удаление
 IF EXISTS (SELECT * FROM sys.databases WHERE name = 'MoldovanEmploymentDB')
@@ -16,12 +15,10 @@ BEGIN
     DROP DATABASE MoldovanEmploymentDB;
 END
 GO
-
 -- Создание новой базы данных MoldovanEmploymentDB
 -- Создаётся новая база данных с именем MoldovanEmploymentDB
 CREATE DATABASE MoldovanEmploymentDB;
 GO
-
 -- Использовать новую базу данных MoldovanEmploymentDB
 -- После создания новой базы данных, переключение на неё для дальнейших операций
 USE MoldovanEmploymentDB;
@@ -136,8 +133,8 @@ IF NOT EXISTS (SELECT *
 BEGIN
     CREATE TABLE CountryPolicies
     (
-        PolicyID INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
-        CountryID INT NOT NULL,
+        PolicyID INT IDENTITY(1, 1) NOT NULL,
+        CountryID INT NOT NULL PRIMARY KEY, -- Сделаем CountryID первичным ключом
         PolicyDescription TEXT NOT NULL,
         FOREIGN KEY (CountryID) REFERENCES Countries(CountryID)
     );
@@ -150,19 +147,16 @@ GO
 ALTER TABLE Citizens ADD CONSTRAINT UQ_Citizens_FullName_BirthDate UNIQUE (FullName, BirthDate); 
 GO
 
--- 2.3
 -- Установка ограничений целостности для таблицы Countries
 -- Установка уникальности для CountryName (если необходимо)
 ALTER TABLE Countries ADD CONSTRAINT UQ_Countries_CountryName UNIQUE (CountryName); 
 GO
 
--- 2.3
 -- Установка ограничений целостности для таблицы Jobs
 -- Установка уникальности для JobTitle (если необходимо)
 ALTER TABLE Jobs ADD CONSTRAINT UQ_Jobs_JobTitle UNIQUE (JobTitle); 
 GO
 
--- 2.3
 -- Установка ограничений целостности для таблицы EmploymentContracts
 -- Добавление ограничения проверки для StartDate и EndDate
 ALTER TABLE EmploymentContracts ADD CONSTRAINT CHK_EmploymentContracts_Dates CHECK (StartDate <= EndDate OR EndDate IS NULL); 
@@ -172,13 +166,11 @@ GO
 ALTER TABLE EmploymentContracts ADD CONSTRAINT CHK_EmploymentContracts_Salary CHECK (Salary > 0); 
 GO
 
--- 2.3
 -- Установка ограничений целостности для таблицы Skills
 -- Установка уникальности для SkillName (если необходимо)
 ALTER TABLE Skills ADD CONSTRAINT UQ_Skills_SkillName UNIQUE (SkillName); 
 GO
 
--- 2.3
 -- Установка значений по умолчанию
 -- Установка значения по умолчанию для Salary в таблице EmploymentContracts
 ALTER TABLE EmploymentContracts ADD CONSTRAINT DF_EmploymentContracts_Salary DEFAULT 1000.00 FOR Salary; 
