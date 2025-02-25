@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">DailyPlanner</string>
+    <string name="Add">Add</string>
+    <string name="View">View</string>
+    <string name="Time">Time</string>
+    <string name="Title">Title</string>
+    <string name="PlannerTitle">Planner Title</string>
+    <string name="PlannerDate">Planner Date</string>
+    <string name="PlannerTime">Planner Time</string>
+    <string name="Update">Update</string>
+    <string name="EnterDate">Date</string>
+    <string name="EnterTime">EnterTime</string>
+    <string name="planning">Planning</string>
+    <string name="update_date">Update Date</string>
+    <string name="update_time">Update Time</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="date_even">Date Even :</string>
+    <string name="time_event">Time Event :</string>
+    <string name="search">Search</string>
+    <string name="task_title">Task Title</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="add">Add</string>
+    <string name="view_calendar">View Calendar</string>
+    <string name="update_reminder">Update Reminder</string>
+    <string name="header">Header</string>
+    <string name="priority">Priority</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+</resources>

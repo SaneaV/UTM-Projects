@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_salad">#A8E4A0</color>
+    <color name="button_background">#A3E29D</color>
+    <color name="button_background_small">#A8E4A0</color>
+    <color name="edittext_background">#FFFFFF</color>
+    <color name="item_background">#FFFFFF</color>
+    <color name="priority_low">#00FF00</color>
+    <color name="priority_medium">#FFFF00</color>
+    <color name="priority_high">#FF0000</color>
+    <color name="your_header_text_color">#FFFFFF</color>
+    <color name="your_hour_minute_text_color">#000000</color>
+    <color name="your_am_pm_text_color">#000000</color>
+</resources>
