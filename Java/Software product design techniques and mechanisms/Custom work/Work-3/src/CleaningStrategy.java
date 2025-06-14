@@ -1,0 +1,4 @@
+interface CleaningStrategy {
+
+  void clean();
+}
