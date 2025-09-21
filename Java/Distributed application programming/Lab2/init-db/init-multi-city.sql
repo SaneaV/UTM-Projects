@@ -1,0 +1,4 @@
+CREATE DATABASE abaclia;
+CREATE DATABASE bascalia;
+CREATE DATABASE basarabeasca;
+CREATE DATABASE iserlia;
