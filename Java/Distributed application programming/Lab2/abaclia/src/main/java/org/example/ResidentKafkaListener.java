@@ -1,105 +1,28 @@
 package org.example;
 
-import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
+import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class ResidentKafkaListener {
 
-  private final ResidentRepository repository;
-  private final KafkaTemplate<String, AggregationResponse> kafkaTemplate;
-
-  public ResidentKafkaListener(ResidentRepository repository,
-      KafkaTemplate<String, AggregationResponse> kafkaTemplate) {
-    this.repository = repository;
-    this.kafkaTemplate = kafkaTemplate;
-  }
+  private final AccessPolicy accessPolicy;
+  private final ResidentService residentService;
+  private final AggregationResponder responder;
 
   @KafkaListener(topics = "residents-requests", groupId = "abaclia-service")
   public void listen(AggregationRequest request) {
-    String city = request.getCity();
-    String role = request.getRole();
-
-    if (!"abaclia".equalsIgnoreCase(city)) {
-      return;
-    }
-    if ("super-admin".equalsIgnoreCase(role)) {
+    if (!accessPolicy.isCityAllowed(request.getCity(), request.getRole())) {
       return;
     }
 
-    if (!isAuthorized(city, role)) {
-      AggregationResponse response = new AggregationResponse(false, "Access denied: insufficient role", null);
-      kafkaTemplate.send("residents-responses", response);
+    if (!accessPolicy.isAuthorized(request.getCity(), request.getRole())) {
+      responder.sendError("Access denied: insufficient role");
       return;
     }
 
-    AggregationResponse response;
-    Map<String, Object> data = new HashMap<>();
-
-    try {
-      switch (request.getAction()) {
-        case "findEntity" -> {
-          Map<String, Object> payload = request.getPayload();
-          if (payload != null && payload.get("id") != null) {
-            Long id = Long.valueOf(payload.get("id").toString());
-            Resident r = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Resident not found with id " + id));
-            data.put("resident", r);
-          } else {
-            data.put("residents", repository.findAll());
-          }
-          response = new AggregationResponse(true, "Residents found", data);
-        }
-        case "createEntity" -> {
-          var payload = request.getPayload();
-          Resident r = new Resident();
-          r.setFirstName((String) payload.get("firstName"));
-          r.setLastName((String) payload.get("lastName"));
-          r.setBirthDate(LocalDate.parse((String) payload.get("birthDate")));
-          r.setPhoneNumber((String) payload.get("phoneNumber"));
-          r.setPassportNumber((String) payload.get("passportNumber"));
-          repository.save(r);
-          data.put("resident", r);
-          response = new AggregationResponse(true, "Resident created", data);
-        }
-        case "updateEntity" -> {
-          var payload = request.getPayload();
-          Long id = Long.valueOf(payload.get("id").toString());
-          Resident r = repository.findById(id)
-              .orElseThrow(() -> new RuntimeException("Resident not found with id " + id));
-          r.setFirstName((String) payload.get("firstName"));
-          r.setLastName((String) payload.get("lastName"));
-          r.setBirthDate(LocalDate.parse((String) payload.get("birthDate")));
-          r.setPhoneNumber((String) payload.get("phoneNumber"));
-          r.setPassportNumber((String) payload.get("passportNumber"));
-          repository.save(r);
-          data.put("resident", r);
-          response = new AggregationResponse(true, "Resident updated", data);
-        }
-        case "deleteEntity" -> {
-          Long id = Long.valueOf(request.getPayload().get("id").toString());
-          repository.deleteById(id);
-          data.put("deletedId", id);
-          response = new AggregationResponse(true, "Resident deleted", data);
-        }
-        default -> response = new AggregationResponse(false, "Unknown action", null);
-      }
-    } catch (Exception e) {
-      response = new AggregationResponse(false, e.getMessage(), null);
-    }
-
-    kafkaTemplate.send("residents-responses", response);
-  }
-
-  private boolean isAuthorized(String city, String role) {
-    if (role != null && role.startsWith("mayor_")) {
-      String mayorCity = role.substring(6);
-      return mayorCity.equalsIgnoreCase(city);
-    }
-    return false;
+    responder.send(() -> residentService.handle(request));
   }
 }
