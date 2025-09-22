@@ -76,7 +76,7 @@ public class Variant_11 {
         Thread.sleep(1000);
       } catch (InterruptedException ignored) {
       }
-      System.out.println(BLUE + "Активность 6 завершена после 6" + RESET);
+      System.out.println(BLUE + "Активность 4 завершена после 6" + RESET);
       SEMAPHORE_4.release(2);
     });
 
